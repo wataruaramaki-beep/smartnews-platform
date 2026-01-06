@@ -116,7 +116,7 @@ export default function PostsPage() {
             <h3 className="text-sm font-medium text-gray-700 mb-3">公開先サイト</h3>
             <div className="flex flex-wrap gap-3">
               <a
-                href="http://localhost:3004"
+                href="https://smartnews-platform-creators.vercel.app"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center px-4 py-2 border border-purple-300 text-sm font-medium rounded-md text-purple-700 bg-purple-50 hover:bg-purple-100 transition-colors"
@@ -130,7 +130,7 @@ export default function PostsPage() {
                 </svg>
               </a>
               <a
-                href="http://localhost:3002"
+                href="https://smartnews-platform-biz.vercel.app"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center px-4 py-2 border border-blue-300 text-sm font-medium rounded-md text-blue-700 bg-blue-50 hover:bg-blue-100 transition-colors"

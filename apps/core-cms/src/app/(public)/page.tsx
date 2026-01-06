@@ -6,7 +6,7 @@ export default function HomePage() {
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
         {/* SmartNews for Creators */}
         <Link
-          href="http://localhost:3004"
+          href="https://smartnews-platform-creators.vercel.app"
           target="_blank"
           rel="noopener noreferrer"
           className="group relative overflow-hidden rounded-2xl bg-gradient-to-br from-purple-500 to-indigo-600 p-8 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105"
@@ -55,7 +55,7 @@ export default function HomePage() {
 
         {/* SmartNews Biz */}
         <Link
-          href="http://localhost:3002"
+          href="https://smartnews-platform-biz.vercel.app"
           target="_blank"
           rel="noopener noreferrer"
           className="group relative overflow-hidden rounded-2xl bg-gradient-to-br from-blue-500 to-cyan-600 p-8 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105"
