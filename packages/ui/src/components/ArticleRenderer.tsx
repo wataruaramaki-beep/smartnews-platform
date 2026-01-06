@@ -32,7 +32,7 @@ export function ArticleRenderer({ content }: ArticleRendererProps) {
 
           if (node.type === 'heading') {
             const text = node.content?.map((c: any) => c.text).join('') || '';
-            const HeadingTag = `h${node.attrs?.level || 2}` as keyof JSX.IntrinsicElements;
+            const HeadingTag = `h${node.attrs?.level || 2}` as keyof React.JSX.IntrinsicElements;
             return (
               <HeadingTag key={index} className="font-bold mb-4 mt-6">
                 {text}
