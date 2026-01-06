@@ -86,13 +86,15 @@ export default async function PostPage({ params }: PageProps) {
                 <p className="font-medium">
                   {post.author?.display_name || post.author?.username}
                 </p>
-                <time className="text-sm text-gray-500" dateTime={post.published_at}>
-                  {new Date(post.published_at).toLocaleDateString('ja-JP', {
-                    year: 'numeric',
-                    month: 'long',
-                    day: 'numeric',
-                  })}
-                </time>
+                {post.published_at && (
+                  <time className="text-sm text-gray-500" dateTime={post.published_at}>
+                    {new Date(post.published_at).toLocaleDateString('ja-JP', {
+                      year: 'numeric',
+                      month: 'long',
+                      day: 'numeric',
+                    })}
+                  </time>
+                )}
               </div>
             </div>
 
