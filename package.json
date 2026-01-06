@@ -12,12 +12,10 @@
   "keywords": ["smartnews", "cms", "monorepo"],
   "author": "",
   "license": "ISC",
-  "packageManager": "pnpm@10.27.0",
   "devDependencies": {
     "turbo": "^2.7.3"
   },
   "engines": {
-    "node": ">=18.0.0",
-    "pnpm": ">=8.0.0"
+    "node": ">=18.0.0"
   }
 }
