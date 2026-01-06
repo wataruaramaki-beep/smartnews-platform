@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "SmartNews Platform Monorepo - Core CMS, Creators, and Biz",
   "private": true,
+  "packageManager": "pnpm@10.27.0",
   "scripts": {
     "dev": "turbo run dev",
     "build": "turbo run build",
@@ -16,6 +17,7 @@
     "turbo": "^2.7.3"
   },
   "engines": {
-    "node": ">=18.0.0"
+    "node": ">=18.0.0",
+    "pnpm": ">=10.0.0"
   }
 }
