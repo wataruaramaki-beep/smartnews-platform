@@ -1,0 +1,52 @@
+{
+  "name": "@smartnews/core-cms",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "type-check": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@smartnews/database": "workspace:*",
+    "@react-email/components": "^1.0.2",
+    "@react-email/render": "^2.0.0",
+    "@supabase/ssr": "^0.8.0",
+    "@supabase/supabase-js": "^2.39.0",
+    "@tailwindcss/typography": "^0.5.19",
+    "@tiptap/core": "^3.14.0",
+    "@tiptap/extension-color": "^3.14.0",
+    "@tiptap/extension-highlight": "^3.14.0",
+    "@tiptap/extension-image": "^3.14.0",
+    "@tiptap/extension-link": "^3.14.0",
+    "@tiptap/extension-placeholder": "^3.14.0",
+    "@tiptap/extension-table": "^3.14.0",
+    "@tiptap/extension-table-cell": "^3.14.0",
+    "@tiptap/extension-table-header": "^3.14.0",
+    "@tiptap/extension-table-row": "^3.14.0",
+    "@tiptap/extension-text-align": "^3.14.0",
+    "@tiptap/extension-underline": "^3.14.0",
+    "@tiptap/extension-youtube": "^3.14.0",
+    "@tiptap/html": "^3.14.0",
+    "@tiptap/react": "^3.14.0",
+    "@tiptap/starter-kit": "^3.14.0",
+    "next": "^15.1.0",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "resend": "^6.6.0",
+    "sharp": "^0.34.5"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0",
+    "autoprefixer": "^10.4.0",
+    "eslint": "^9.0.0",
+    "eslint-config-next": "^15.1.0",
+    "postcss": "^8.4.0",
+    "tailwindcss": "^3.4.0",
+    "typescript": "^5.3.0"
+  }
+}

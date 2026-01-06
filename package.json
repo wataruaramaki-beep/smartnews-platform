@@ -1,0 +1,23 @@
+{
+  "name": "smartnews-platform",
+  "version": "1.0.0",
+  "description": "SmartNews Platform Monorepo - Core CMS, Creators, and Biz",
+  "private": true,
+  "scripts": {
+    "dev": "turbo run dev",
+    "build": "turbo run build",
+    "lint": "turbo run lint",
+    "type-check": "turbo run type-check"
+  },
+  "keywords": ["smartnews", "cms", "monorepo"],
+  "author": "",
+  "license": "ISC",
+  "packageManager": "pnpm@10.27.0",
+  "devDependencies": {
+    "turbo": "^2.7.3"
+  },
+  "engines": {
+    "node": ">=18.0.0",
+    "pnpm": ">=8.0.0"
+  }
+}
