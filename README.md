@@ -2,6 +2,8 @@
 
 SmartNews CoreをHeadless CMSとして、Creators、Bizの3つのアプリケーションで構成されるモノレポです。
 
+> **⚠️ Claude Code を使用する場合**: 必ず最初に [`CLAUDE_CODE_GUIDE.md`](./CLAUDE_CODE_GUIDE.md) を読み込んでください。モノレポ構造、Git連携、Vercelデプロイに関する重要な情報が記載されています。
+
 ## 📁 プロジェクト構成
 
 ```
