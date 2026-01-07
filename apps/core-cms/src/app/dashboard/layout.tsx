@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'マイページ｜Media Tech Compass',
+  title: 'マイページ｜SmartNews Core',
   description: 'ユーザーダッシュボード',
 }
 

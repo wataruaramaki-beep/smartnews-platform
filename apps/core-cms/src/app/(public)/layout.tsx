@@ -4,8 +4,8 @@ import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: {
-    default: 'Media Tech Compass',
-    template: '%s | Media Tech Compass',
+    default: 'SmartNews Core',
+    template: '%s | SmartNews Core',
   },
   description: 'テクノロジーとビジネスの最新情報',
 };
