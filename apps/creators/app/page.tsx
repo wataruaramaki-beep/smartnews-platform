@@ -60,7 +60,7 @@ export default async function HomePage() {
                   <div className="p-6">
                     <h2 className="text-xl font-semibold mb-2">
                       <Link
-                        href={`/posts/${post.slug}`}
+                        href={`/${post.author?.username}/posts/${post.slug}`}
                         className="hover:text-indigo-600 transition-colors"
                       >
                         {post.title}

@@ -105,7 +105,7 @@ export default async function CreatorPage({ params }: PageProps) {
                         <div className="p-6">
                           <h3 className="text-xl font-semibold mb-2">
                             <Link
-                              href={`/posts/${post.slug}`}
+                              href={`/${username}/posts/${post.slug}`}
                               className="hover:text-indigo-600 transition-colors"
                             >
                               {post.title}
