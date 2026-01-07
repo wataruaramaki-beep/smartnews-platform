@@ -47,14 +47,20 @@ export default function EditPostPage() {
     setDistributionChannels((prev) => {
       const updated = { ...prev, [channel]: !prev[channel] };
 
-      // SmartNews Bizを選択した場合、SmartNews for Creatorsを無効化
+      // SmartNews Bizを選択した場合、SmartNews for Creatorsとニュースレターを無効化
       if (channel === 'smartNewsBiz' && updated.smartNewsBiz) {
         updated.smartNewsCreators = false;
+        updated.newsletter = false;
       }
 
       // SmartNews for Creatorsを選択した場合、SmartNews Bizを無効化
       if (channel === 'smartNewsCreators' && updated.smartNewsCreators) {
         updated.smartNewsBiz = false;
+      }
+
+      // SmartNews for Creatorsを解除した場合、ニュースレターも自動的に解除
+      if (channel === 'smartNewsCreators' && !updated.smartNewsCreators) {
+        updated.newsletter = false;
       }
 
       return updated;
@@ -276,22 +282,15 @@ export default function EditPostPage() {
         <div className="px-4 py-6 sm:px-0">
           {/* Information Note */}
           <div className="mb-6 p-4 bg-blue-50 border border-blue-200 rounded-lg">
-            <p className="text-sm text-blue-800 mb-4">
-              ＊このCMSからの投稿は、SmartNews、SmartNews for Creators、SmartNews Biz、ニュースレターの中から配信先を選ぶことで同時配信することができます。ただし、SmartNews Biz配信を選択した場合、PRコンテンツと見なされ、SmartNewsでは掲載面が限定されるほか、SmartNews for Creatorsへの配信はできません
-            </p>
+            <div className="text-sm text-blue-800 mb-4 space-y-1">
+              <p>＊このCMSから、「SmartNews for Creators」「SmartNews Biz」いずれかへ無料でコンテンツ配信することができます。</p>
+              <p>＊「SmartNews for Creators」「SmartNews Biz」に配信すると、自動的に「SmartNewsに」にも配信されます。</p>
+              <p>＊「SmartNews Biz」に投稿されるコンテンツにはPR表記が付きます。</p>
+            </div>
 
             <div className="space-y-2">
               <p className="text-sm font-medium text-blue-900">配信先:</p>
               <div className="space-y-2">
-                <label className="flex items-center">
-                  <input
-                    type="checkbox"
-                    checked={distributionChannels.smartNews}
-                    onChange={() => handleDistributionChange('smartNews')}
-                    className="h-4 w-4 text-indigo-600 focus:ring-indigo-500 border-gray-300 rounded"
-                  />
-                  <span className="ml-2 text-sm text-blue-800">SmartNews</span>
-                </label>
                 <label className="flex items-center">
                   <input
                     type="checkbox"
@@ -302,6 +301,18 @@ export default function EditPostPage() {
                   />
                   <span className={`ml-2 text-sm ${distributionChannels.smartNewsBiz ? 'text-gray-400' : 'text-blue-800'}`}>
                     SmartNews for Creators
+                  </span>
+                </label>
+                <label className="flex items-center ml-8">
+                  <input
+                    type="checkbox"
+                    checked={distributionChannels.newsletter}
+                    onChange={() => handleDistributionChange('newsletter')}
+                    disabled={!distributionChannels.smartNewsCreators}
+                    className="h-4 w-4 text-indigo-600 focus:ring-indigo-500 border-gray-300 rounded disabled:opacity-50 disabled:cursor-not-allowed"
+                  />
+                  <span className={`ml-2 text-sm ${!distributionChannels.smartNewsCreators ? 'text-gray-400' : 'text-blue-800'}`}>
+                    ニュースレター
                   </span>
                 </label>
                 <label className="flex items-center">
@@ -315,15 +326,6 @@ export default function EditPostPage() {
                   <span className={`ml-2 text-sm ${distributionChannels.smartNewsCreators ? 'text-gray-400' : 'text-blue-800'}`}>
                     SmartNews Biz
                   </span>
-                </label>
-                <label className="flex items-center">
-                  <input
-                    type="checkbox"
-                    checked={distributionChannels.newsletter}
-                    onChange={() => handleDistributionChange('newsletter')}
-                    className="h-4 w-4 text-indigo-600 focus:ring-indigo-500 border-gray-300 rounded"
-                  />
-                  <span className="ml-2 text-sm text-blue-800">ニュースレター</span>
                 </label>
               </div>
             </div>
